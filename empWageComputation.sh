@@ -1,19 +1,17 @@
-#!/bin/bash/
+#!/bin/bash/ -x
 
-echo "Calculate Daily Employee wage"
-calculateEmpWage(){
-	TotalWage=0
-	WagePerHour=20
-	DailyWage=$(( $WagePerHour*8 ))
-	echo "One day Wage is $DailyWage $"
+echo "Check Employee present or absent"
+checkEmpPresentAbsent(){
+	present=0
 	for(( i=1;i<=20;i++ ))
 	do
-		n=$(( RANDOM%5 ))
-		if(( n>0 ))
+		num=$(( RANDOM%5 ))
+		if(( num>0 ))
 		then
-			TotalWage=$(( $TotalWage+$DailyWage ))
+			present=$(( $present+1 ))
 		fi
 	done
-	echo "Total wage of employee is $TotalWage $"
+	echo $present
 }
-calculateEmpWage
+present=$( checkEmpPresentAbsent )
+echo "Employee $present days present in 20 office days"
