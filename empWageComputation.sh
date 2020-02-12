@@ -12,10 +12,10 @@ calculateEmpWage(){
 			TotalWage=$(( $TotalWage+$DailyWage ))
 		fi
 	done
-	echo "$TotalWage"
+	echo "$TotalWage "
 }
 fullTime=$( calculateEmpWage )
-echo "Full time work wage of the employee $fullTime "
+echo "Full time work wage of the employee $fullTime$"
 
 echo "Add Part time Employee & wage"
 calculatePartTimeEmpWage(){
@@ -25,7 +25,7 @@ calculatePartTimeEmpWage(){
 	echo $EmpWage
 }
 EmpPartTimeWage=$( calculatePartTimeEmpWage )
-echo "Part time working wage of the employee $EmpPartTimeWage "
+echo "Part time working wage of the employee $EmpPartTimeWage $"
 totalWage=$(( $fullTime+$EmpPartTimeWage ))
- echo "Total Employee wage $totalWage "
+ echo "Total Employee wage $totalWage $"
 
