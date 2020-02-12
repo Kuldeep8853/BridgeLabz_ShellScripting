@@ -15,7 +15,7 @@ calculateEmpWage(){
 		done
 		echo "$TotalWage "
 }
-	fullTime=$( calculateEmpWage )
+fullTime=$( calculateEmpWage )
 
 echo "Add Part time Employee & wage"
 calculatePartTimeEmpWage(){
@@ -25,23 +25,12 @@ calculatePartTimeEmpWage(){
 	echo $EmpWage
 }
 EmpPartTimeWage=$( calculatePartTimeEmpWage )
-echo "Please Enter the choice: "
-echo "1. Calculate the full time employee total wage..."
-echo "2. Calculate the part time employee total wage..."
-echo "3. Calculate the total wage of employee..."
-read choice
-case $choice in
-1)
-	echo "Full time work wage of the employee $fullTime"
-;;
-2)
-	echo "Part time working wage of the employee $EmpPartTimeWage $"
-;;
-3)
-	totalWage=$(( $fullTime+$EmpPartTimeWage ))
- 	echo "Total Employee wage $totalWage $"
-;;
 
-*)
-	echo "Enter the valid choice!! "
- esac
+echo "Please Enter the how many days part time work: "
+read partTime
+ for(( i=1;i<=partTime;i++ ))
+	do
+	partTimeWage=$(( $partTimeWage+$EmpPartTimeWage ))
+ done
+totalWageOfMonth=$(( $fullTime+$partTimeWage ))
+echo "Total Wage of the the month is $totalWageOfMonth"
