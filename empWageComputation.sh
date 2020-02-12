@@ -13,7 +13,7 @@ calculateEmpWage(){
 			TotalWage=$(( $TotalWage+$DailyWage ))
 		fi
 	done
-	echo "$TotalWage $"
+	echo "$TotalWage "
 }
 fullTime=$( calculateEmpWage )
-echo "Full time work wage of the employee $fullTime "
+echo "Full time work wage of the employee $fullTime$"
