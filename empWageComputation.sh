@@ -1,17 +1,19 @@
 #!/bin/bash/
-echo "Welcome to Employee Wage Computational program on Master Branch"
-echo "Check the employee present or absent"
-checkPresentAbsent(){
-	present=0
+
+echo "Calculate Daily Employee wage"
+calculateEmpWage(){
+	TotalWage=0
+	WagePerHour=20
+	DailyWage=$(( $WagePerHour*8 ))
+	echo "One day Wage is $DailyWage $"
 	for(( i=1;i<=20;i++ ))
 	do
 		n=$(( RANDOM%5 ))
 		if(( n>0 ))
 		then
-			present=$(( $present+1 ))
+			TotalWage=$(( $TotalWage+$DailyWage ))
 		fi
 	done
-	echo $present
+	echo "Total wage of employee is $TotalWage $"
 }
-present=$( checkPresentAbsent )
-echo "Employee present $present days of 20 office days"
+calculateEmpWage
