@@ -1,5 +1,5 @@
 #!/bin/bash/
-
+echo "Calculate Daily Employee wage"
 calculateEmpWage(){
 	TotalWage=0
 	WagePerHour=20
