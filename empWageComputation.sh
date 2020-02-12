@@ -5,7 +5,6 @@ calculateEmpWage(){
 	TotalWage=0
 	WagePerHour=20
 	DailyWage=$(( $WagePerHour*8 ))
-	echo "One day Wage is $DailyWage $"
 	for(( i=1;i<=20;i++ ))
 	do
 		n=$(( RANDOM%5 ))
@@ -14,6 +13,7 @@ calculateEmpWage(){
 			TotalWage=$(( $TotalWage+$DailyWage ))
 		fi
 	done
-	echo "Total wage of employee is $TotalWage $"
+	echo "$TotalWage $"
 }
-calculateEmpWage
+fullTime=$( calculateEmpWage )
+echo "Full time work wage of the employee $fullTime "
