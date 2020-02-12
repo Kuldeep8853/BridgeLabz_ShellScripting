@@ -1,4 +1,4 @@
-#!/bin/bash/
+#!/bin/bash/ -x
 
 echo "Calculate Daily Employee wage"
 calculateEmpWage(){
@@ -26,11 +26,13 @@ calculatePartTimeEmpWage(){
 }
 EmpPartTimeWage=$( calculatePartTimeEmpWage )
 
-echo "Please Enter the how many days part time work: "
-read partTime
- for(( i=1;i<=partTime;i++ ))
-	do
-	partTimeWage=$(( $partTimeWage+$EmpPartTimeWage ))
- done
-totalWageOfMonth=$(( $fullTime+$partTimeWage ))
-echo "Total Wage of the the month is $totalWageOfMonth"
+echo "Total working of the month 20 days and 150 hour"
+totalWageOfMonth=$(( 150*20 ))
+if(( $fullTime < $totalWageOfMonth ))
+then
+	RemainingWage=$(( $totalWageOfMonth-$fullTime ))
+fi
+remainingHour=$(( $RemainingWage/20 ))
+echo "Remaining hour of the month $remainingHour and complete remaining hour doing part time work"
+partTimeDays=$(( $remainingHour/4 ))
+echo " do the $partTimeDays days part time and complete the remaining hour" 
