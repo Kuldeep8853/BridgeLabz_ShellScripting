@@ -1,4 +1,4 @@
-#!/bin/bash/ -x
+#!/bin/bash/ 
 echo "Welcome to Employee Wage Computation program on Master branch"
 
 echo "Check Employee present or absent"
