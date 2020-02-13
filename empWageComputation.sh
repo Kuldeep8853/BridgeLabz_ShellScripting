@@ -34,3 +34,15 @@ calculateEmpWage(){
 }
 fullTime=$( calculateEmpWage )
 echo "Full time work wage of the employee $fullTime$"
+
+echo "Add Part time Employee & wage"
+calculatePartTimeEmpWage(){
+	PerDayHour=4
+	WagePerHour=20
+	EmpWage=$(( $WagePerHour*$PerDayHour ))
+	echo $EmpWage
+}
+EmpPartTimeWage=$( calculatePartTimeEmpWage )
+echo "Part time working wage of the employee $EmpPartTimeWage $"
+totalWage=$(( $fullTime+$EmpPartTimeWage ))
+ echo "Total Employee wage $totalWage $"
