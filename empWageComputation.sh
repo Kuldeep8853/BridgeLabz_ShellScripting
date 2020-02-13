@@ -34,11 +34,4 @@ read partTime
  done
 totalWageOfMonth=$(( $fullTime+$partTimeWage ))
 echo "Total Wage of the the month is $totalWageOfMonth"
-
-echo "Calculate the total working hour in the month"
-checkWorkHour(){
-	totalHour=$(( $1/20 ))
-	echo " $totalHour"
-}
-totalHour=$( checkWorkHour $totalWageOfMonth )
-echo "Total working hour of the month $totalHour hour "
+echo "Full time per day wage is 160 and part time per day wage is 80"
