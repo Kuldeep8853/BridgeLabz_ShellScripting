@@ -42,7 +42,6 @@ calculatePartTimeEmpWage(){
 	echo $EmpWage
 }
 EmpPartTimeWage=$( calculatePartTimeEmpWage )
-<<<<<<< HEAD
 
 echo "Please Enter the choice: "
 echo "1. Calculate the full time employee total wage..."
@@ -65,8 +64,6 @@ case $choice in
 	echo "Enter the valid choice!! "
  esac
 
-=======
-
 echo "Please Enter the how many days part time work: "
 read partTime
  for(( i=1;i<=partTime;i++ ))
@@ -75,4 +72,3 @@ read partTime
  done
 totalWageOfMonth=$(( $fullTime+$partTimeWage ))
 echo "Total Wage of the the month is $totalWageOfMonth"
->>>>>>> userCase5_{CalculatingWagesForMonth}
