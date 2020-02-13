@@ -72,7 +72,7 @@ read partTime
  done
 totalWageOfMonth=$(( $fullTime+$partTimeWage ))
 echo "Total Wage of the the month is $totalWageOfMonth"
-echo " do the $partTimeDays days part time and complete the remaining hour" 
+echo "Full time per day wage is 160 and part time per day wage is 80"
 
 echo "Calculate the total working hour in the month"
 checkWorkHour(){
@@ -91,4 +91,5 @@ fi
 remainingHour=$(( $RemainingWage/20 ))
 echo "Remaining hour of the month $remainingHour and complete remaining hour doing part time work"
 partTimeDays=$(( $remainingHour/4 ))
+echo "Do the $partTimeDays days part time and complete the remaining hour" 
 
