@@ -7,7 +7,7 @@ checkFname(){
 		echo "Valid first name"
 	else
 		echo " Invalid first name"
-		read Fname
+		checkFname
 	fi
 }
 checkFname
@@ -20,6 +20,7 @@ checkLname(){
 		echo "valid Last name"
 	else
 		echo"Invalid Last name"
+		checkLname
 	fi
 }
 checkLname
@@ -32,6 +33,7 @@ checkMobileNo(){
 		echo "Valid mobile no."
 	else
 		echo "Invalid mobile number"
+		checkMobileNo
 	fi
 }
 checkMobileNo
@@ -44,6 +46,7 @@ checkEmail(){
 		echo "Valid Email Id"
 	else
 		echo "Invalid Email id"
+		checkEmail
 	fi
 }
 checkEmail
@@ -55,7 +58,8 @@ checkPwd(){
 	then
 		echo "Valid PassWord"
 	else
-		echo "Invelid PassWord"
+		echo "Invalid PassWord"
+		checkPwd
 	fi
 }
 checkPwd
